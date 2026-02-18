@@ -38,11 +38,11 @@
             <div class="section-heading">Tools & Technologies</div>
             <div class="section-line"></div>
             <div>
-                <span class="tool-badge">Wiz CSPM</span>
+                <span class="tool-badge">Wiz CSPM/CWPP</span>
                 <span class="tool-badge">AWS Security Hub</span>
                 <span class="tool-badge">AWS GuardDuty</span>
-                <span class="tool-badge">Jira</span>
-                <span class="tool-badge">Slack</span>
+                <span class="tool-badge">Jira Cloud</span>
+                <span class="tool-badge">Slack Enterprise</span>
             </div>
         </div>
     </div>
@@ -57,7 +57,73 @@
             <div class="section-line"></div>
             <div class="row">
                 <div class="col-lg-8">
-                    <p class="challenge-text">20+ AWS and Azure accounts with inconsistent security baselines, no centralized visibility, and manual remediation processes that left high-risk misconfigurations undetected for weeks.</p>
+                    <p class="challenge-text">Inherited 20+ AWS and Azure accounts with fragmented security posture. No centralized visibility into cloud risks, manual remediation workflows.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Security Domains -->
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Scope</div>
+            <div class="section-heading">Security Domains & Risk Coverage</div>
+            <div class="section-line"></div>
+            <div class="row g-4 mt-4">
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h6 class="mb-3 fw-semibold">Cloud Misconfigurations</h6>
+                        <ul class="small mb-0">
+                            <li>Public storage buckets (S3, Azure Blob)</li>
+                            <li>Open ports & insecure network settings</li>
+                            <li>Missing encryption at-rest/in-transit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h6 class="mb-3 fw-semibold">Identity & Access</h6>
+                        <ul class="small mb-0">
+                            <li>Excessive IAM permissions & risky roles</li>
+                            <li>Unused permissions & privilege creep</li>
+                            <li>Cross-account access exposures</li>
+                            <li>Weak MFA enforcement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h6 class="mb-3 fw-semibold">Attack Surface</h6>
+                        <ul class="small mb-0">
+                            <li>Internet-exposed resources</li>
+                            <li>Shadow admins & forgotten access</li>
+                            <li>Unnecessary public endpoints</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h6 class="mb-3 fw-semibold">Container Risk</h6>
+                        <ul class="small mb-0">
+                            <li>Vulnerable container images</li>
+                            <li>Misconfigurations in container runtime</li>
+                            <li>Exposed secrets in images/containers</li>
+                            <li>Over-privileged containers & service accounts</li>
+                            <li>Runtime threats/anomalous behavior</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h6 class="mb-3 fw-semibold">Compliance & Data</h6>
+                        <ul class="small mb-0">
+                            <li>Sensitive data exposure (PII, secrets)</li>
+                            <li>CIS Benchmarks, PCI-DSS violations</li>
+                            <li>Vulnerability + misconfig correlations</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,26 +135,27 @@
     <div class="content-section">
         <div class="container">
             <div class="section-label">Approach</div>
-            <div class="section-heading">Solution</div>
+            <div class="section-heading">Implementation</div>
             <div class="section-line"></div>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="dark-card">
                         <h5>Deployment</h5>
                         <ul>
-                            <li>Onboarded 20+ accounts to Wiz CSPM in 2 weeks</li>
-                            <li>Configured 50+ custom policies (IAM, networking, storage)</li>
-                            <li>Integrated Security Hub + GuardDuty findings</li>
+                            <li>Onboarded 20+ AWS/Azure accounts in 4 weeks</li>
+                            <li>Deployed <strong>100+ custom Wiz policies</strong> tailored to OwnBackup risk profile</li>
+                            <li>Established baseline scoring across all domains</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="dark-card">
-                        <h5>Automation</h5>
+                        <h5>Automation & Workflow</h5>
                         <ul>
-                            <li>Auto-create Jira tickets for high/critical issues</li>
-                            <li>Real-time Slack alerts to cloud engineering teams</li>
+                            <li>Automated Jira ticketing for high/critical issues <em>(assigned to security engineers)</em></li>
+                            <li>Real-time Slack alerts routed to relevant cloud engineering teams</li>
                             <li>Policy tuning reduced false positives by 40%</li>
+                            <li>Weekly executive risk dashboards</li>
                         </ul>
                     </div>
                 </div>
@@ -102,13 +169,13 @@
     <div class="content-section">
         <div class="container">
             <div class="section-label">Impact</div>
-            <div class="section-heading">Results</div>
+            <div class="section-heading">Business Impact</div>
             <div class="section-line"></div>
             <div class="row g-4">
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">70%</div><div class="stat-label">↓ High-risk misconfigs</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Policy pass rate</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">12w</div><div class="stat-label">Full deployment</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">50+</div><div class="stat-label">Custom policies</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">70%</div><div class="stat-label">↓ High-risk misconfigurations</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Policy compliance rate</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100+</div><div class="stat-label">Custom policies deployed</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">4w</div><div class="stat-label">Full deployment</div></div></div>
             </div>
         </div>
     </div>
