@@ -10,8 +10,9 @@
         .hero { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 80px 0; }
         .project-card { transition: transform 0.3s, box-shadow 0.3s; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-        .tool-badge { background: #f3f4f6; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 2px; }
+        .tool-badge { background: #f3f4f6; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 2px; display: inline-block; }
         .metric { font-weight: bold; color: #10b981; font-size: 1.1em; }
+        .header-text { max-width: 600px; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -20,17 +21,19 @@
         <div class="container">
             <h1 class="display-4 fw-bold mb-3">Ofir Halbershtat</h1>
             <h2 class="h3 mb-4">Cloud Security & DevSecOps Portfolio</h2>
-            <p class="lead mb-4">8+ enterprise projects | CISO → Product Security Leader | Tel Aviv</p>
-            <a href="https://www.linkedin.com/in/ofir-halbershtat/" class="btn btn-light btn-lg me-3">LinkedIn</a>
-            <a href="OfirHalbershtatCV.pdf" class="btn btn-outline-light btn-lg">Resume PDF</a>
+            <p class="lead header-text">8+ enterprise projects showcasing Wiz CSPM, Cloudflare ZTNA, Snyk pipelines, OT security, and AI/LLM security | CISO → Product Security Leader</p>
+            <div class="mt-4">
+                <a href="https://linkedin.com/in/ofirhalbershtat" class="btn btn-light btn-lg me-3">LinkedIn</a>
+                <a href="OfirHalbershtatCV.pdf" class="btn btn-outline-light btn-lg">Resume PDF</a>
+            </div>
         </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Grid -->
     <div class="container my-5">
         <div class="row g-4">
             
-            <!-- Project 1 -->
+            <!-- 1. Wiz Multi-Cloud -->
             <div class="col-lg-6 col-md-6">
                 <div class="card project-card h-100">
                     <div class="card-body">
@@ -45,23 +48,175 @@
                         </div>
                         <ul class="mt-3 small">
                             <li>Onboarded 20+ AWS/Azure accounts to Wiz CSPM</li>
-                            <li>Automated Jira ticketing + Slack alerts</li>
+                            <li>Automated Jira ticketing + Slack alerts to cloud teams</li>
+                            <li>Tuned 50+ policies covering IAM, networking, storage</li>
                         </ul>
-                        <p class="metric">70% ↓ high-risk misconfigs | 95% policy pass</p>
+                        <p class="metric">70% ↓ high-risk misconfigs | 95% policy pass rate</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Add other 7 projects here (same structure) -->
-            <!-- Project 2: Cloudflare Zero Trust -->
-            <!-- ... -->
+            <!-- 2. Cloudflare Zero Trust -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloudflare Zero Trust → VPN Replacement</h5>
+                        <p class="card-text small text-muted">Consulting | 2025</p>
+                        <div>
+                            <span class="tool-badge">Cloudflare Zero Trust</span>
+                            <span class="tool-badge">Terraform</span>
+                            <span class="tool-badge">Bash</span>
+                            <span class="tool-badge">PowerShell</span>
+                        </div>
+                        <ul class="mt-3 small">
+                            <li>Deployed tunnels + Gateway for 100+ internal apps</li>
+                            <li>Custom Terraform modules for secure access policies</li>
+                            <li>Device posture + JIT access automation</li>
+                        </ul>
+                        <p class="metric">100% VPN elimination | 85% faster access provisioning</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Snyk DevSecOps Pipeline -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Snyk + SonarQube DevSecOps Pipeline</h5>
+                        <p class="card-text small text-muted">OwnBackup | Product Security TL | 2023</p>
+                        <div>
+                            <span class="tool-badge">Snyk SCA</span>
+                            <span class="tool-badge">SonarQube SAST</span>
+                            <span class="tool-badge">Sonatype Nexus Firewall</span>
+                            <span class="tool-badge">GitHub Actions</span>
+                        </div>
+                        <ul class="mt-3 small">
+                            <li>Blocked PRs on critical SAST/SCA findings</li>
+                            <li>Nexus Firewall blocked malicious packages</li>
+                            <li>95% code coverage with remediation SLAs</li>
+                        </ul>
+                        <p class="metric">Zero critical vulns in prod | 40% faster releases</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Entra ID IAM -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Entra ID Zero Trust IAM Modernization</h5>
+                        <p class="card-text small text-muted">OwnBackup | Product Security TL | 2023</p>
+                        <div>
+                            <span class="tool-badge">Entra ID PIM</span>
+                            <span class="tool-badge">Conditional Access</span>
+                            <span class="tool-badge">MFA/RBAC</span>
+                            <span class="tool-badge">SSO SAML</span>
+                        </div>
+                        <ul class="mt-3 small">
+                            <li>Enforced MFA everywhere, killed legacy auth</li>
+                            <li>PIM + Conditional Access for JIT admin access</li>
+                            <li>RBAC across 10+ identity providers</li>
+                        </ul>
+                        <p class="metric">100% MFA coverage | 60% ↓ privileged accounts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Splunk Detection -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Splunk Unified Detection Platform</h5>
+                        <p class="card-text small text-muted">OwnBackup | Product Security TL | 2024</p>
+                        <div>
+                            <span class="tool-badge">Splunk</span>
+                            <span class="tool-badge">Azure Defender</span>
+                            <span class="tool-badge">GuardDuty</span>
+                            <span class="tool-badge">CrowdStrike</span>
+                            <span class="tool-badge">Wiz</span>
+                        </div>
+                        <ul class="mt-3 small">
+                            <li>Ingested Defender/GuardDuty/CrowdStrike/Wiz telemetry</li>
+                            <li>Custom detection rules for anomalous IAM/behavior</li>
+                            <li>Unified dashboards + SOAR workflows</li>
+                        </ul>
+                        <p class="metric">50% faster MTTR | 87% SLA compliance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. OT Security -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">OT Zero Trust & Governance</h5>
+                        <p class="card-text small text-muted">Orbia CISO | 2020</p>
+                        <div>
+                            <span class="tool-badge">ManageEngine</span>
+                            <span class="tool-badge">HPE Aruba</span>
+                            <span class="tool-badge">Cisco Umbrella</span>
+                        </div>
+                        <ul class="mt-3 small">
+                            <li>Asset inventory of 5,000+ OT devices</li>
+                            <li>IT/OT segmentation + Zero Trust JIT access</li>
+                            <li>Cisco Umbrella DNS + patch management</li>
+                        </ul>
+                        <p class="metric">50% greater critical coverage | Zero OT breaches</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. MDM Deployment -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">JumpCloud + Intune MDM Deployment</h5>
+                        <p class="card-text small text-muted">BDO Consultant | 2019</p>
+                        <div>
+                            <span class="tool-badge">JumpCloud</span>
+                            <span class="tool-badge">Microsoft Intune</span>
+                            <span class="tool-badge">Azure AD CA</span>
+                        </div>
+                        <ul class="mt-3 small">
+                            <li>MFA, encryption, patching for 500+ devices</li>
+                            <li>Cross-platform compliance + conditional access</li>
+                            <li>Automated wipe/lock for lost devices</li>
+                        </ul>
+                        <p class="metric">100% compliance | Full audit readiness</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. AI Security -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">AI/LLM Security Framework</h5>
+                        <p class="card-text small text-muted">Consulting | 2025</p>
+                        <div>
+                            <span class="tool-badge">LLM Agents</span>
+                            <span class="tool-badge">MCP Servers</span>
+                            <span class="tool-badge">Snyk Scanning</span>
+                        </div>
+                        <ul class="mt-3 small">
+                            <li>Vulnerability scanning for LLM dependencies</li>
+                            <li>Secure MCP server deployment + access controls</li>
+                            <li>Prompt injection + model poisoning defenses</li>
+                        </ul>
+                        <p class="metric">Production-ready AI security baseline</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2026 Ofir Halbershtat | +972 54-7643249 | halbershtatofir@gmail.com</p>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2026 Ofir Halbershtat | +972 54-7643249 | halbershtatofir@gmail.com</p>
+            <p class="small">Cloud Security Architect | DevSecOps | OT Security | AI Security</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
