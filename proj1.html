@@ -75,49 +75,59 @@
             <div class="section-label">Scope</div>
             <div class="section-heading">Security Domains & Risk Coverage</div>
             <div class="section-line"></div>
-            <div class="domains-grid">
-                <div class="dark-card">
-                    <h6 class="mb-3 fw-semibold">Cloud Misconfigurations</h6>
-                    <ul class="small mb-0">
-                        <li>Public storage buckets (S3, Azure Blob)</li>
-                        <li>Open ports & insecure network settings</li>
-                        <li>Missing encryption at-rest/in-transit</li>
-                    </ul>
+            <div class="row g-3 mt-3" id="domains-cards">
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Cloud Misconfigurations</h6>
+                        <ul class="small mb-0">
+                            <li>Public storage buckets (S3, Azure Blob)</li>
+                            <li>Open ports & insecure network settings</li>
+                            <li>Missing encryption at-rest/in-transit</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="dark-card">
-                    <h6 class="mb-3 fw-semibold">Identity & Access</h6>
-                    <ul class="small mb-0">
-                        <li>Excessive IAM permissions & risky roles</li>
-                        <li>Unused permissions & privilege creep</li>
-                        <li>Cross-account access exposures</li>
-                        <li>Weak MFA enforcement</li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Identity & Access</h6>
+                        <ul class="small mb-0">
+                            <li>Excessive IAM permissions & risky roles</li>
+                            <li>Unused permissions & privilege creep</li>
+                            <li>Cross-account access exposures</li>
+                            <li>Weak MFA enforcement</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="dark-card">
-                    <h6 class="mb-3 fw-semibold">Attack Surface</h6>
-                    <ul class="small mb-0">
-                        <li>Internet-exposed resources</li>
-                        <li>Shadow admins & forgotten access</li>
-                        <li>Unnecessary public endpoints</li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Attack Surface</h6>
+                        <ul class="small mb-0">
+                            <li>Internet-exposed resources</li>
+                            <li>Shadow admins & forgotten access</li>
+                            <li>Unnecessary public endpoints</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="dark-card">
-                    <h6 class="mb-3 fw-semibold">Container Risk</h6>
-                    <ul class="small mb-0">
-                        <li>Vulnerable container images</li>
-                        <li>Misconfigurations in container runtime</li>
-                        <li>Exposed secrets in images/containers</li>
-                        <li>Over-privileged containers & service accounts</li>
-                        <li>Runtime threats/anomalous behavior</li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Container Risk</h6>
+                        <ul class="small mb-0">
+                            <li>Vulnerable container images</li>
+                            <li>Misconfigurations in container runtime</li>
+                            <li>Exposed secrets in images/containers</li>
+                            <li>Over-privileged containers & service accounts</li>
+                            <li>Runtime threats/anomalous behavior</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="dark-card">
-                    <h6 class="mb-3 fw-semibold">Compliance & Data</h6>
-                    <ul class="small mb-0">
-                        <li>Sensitive data exposure (PII, secrets)</li>
-                        <li>CIS Benchmarks, PCI-DSS violations</li>
-                        <li>Vulnerability + misconfig correlations</li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Compliance & Data</h6>
+                        <ul class="small mb-0">
+                            <li>Sensitive data exposure (PII, secrets)</li>
+                            <li>CIS Benchmarks, PCI-DSS violations</li>
+                            <li>Vulnerability + misconfig correlations</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,7 +194,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function equalizeDomainCards() {
-            const cards = document.querySelectorAll('.domains-grid .dark-card');
+            const cards = document.querySelectorAll('#domains-cards .dark-card');
             cards.forEach(c => c.style.height = 'auto');
             let maxH = 0;
             cards.forEach(c => maxH = Math.max(maxH, c.offsetHeight));
