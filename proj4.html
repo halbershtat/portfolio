@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entra ID IAM Modernization | Ofir Halbershtat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.6; }
+        .top-nav { background: rgba(13,17,23,0.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-brand { font-weight: 700; font-size: 1rem; color: #e6edf3; text-decoration: none; }
+        .nav-brand:hover { color: #58a6ff; }
+        .nav-links a { color: #8b949e; text-decoration: none; margin-left: 28px; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #58a6ff; }
+        .hero { padding: 80px 0 64px; position: relative; overflow: hidden; background: #0d1117; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 10% 50%, rgba(88,166,255,0.1) 0%, transparent 70%), radial-gradient(ellipse 40% 50% at 90% 20%, rgba(16,185,129,0.07) 0%, transparent 60%); pointer-events: none; }
+        .hero-inner { position: relative; z-index: 1; }
+        .hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #58a6ff; margin-bottom: 16px; }
+        .hero-title { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; background: linear-gradient(135deg, #e6edf3 30%, #58a6ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; }
+        .hero-sub { font-size: 1rem; color: #8b949e; margin-bottom: 24px; }
+        .metric-hero { display: inline-block; font-size: 0.85rem; font-weight: 600; color: #10b981; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: 8px; padding: 8px 18px; }
+        .content-section { padding: 56px 0; }
+        .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #58a6ff; margin-bottom: 10px; }
+        .section-heading { font-size: 1.4rem; font-weight: 700; color: #e6edf3; margin-bottom: 6px; }
+        .section-line { width: 32px; height: 2px; background: linear-gradient(90deg, #58a6ff, #10b981); border-radius: 2px; margin-bottom: 32px; }
+        .tool-badge { background: rgba(88,166,255,0.08); color: #58a6ff; border: 1px solid rgba(88,166,255,0.18); padding: 4px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 500; margin: 3px; display: inline-block; }
+        .dark-card { background: rgba(22,27,34,0.7); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 28px; }
+        .dark-card h5 { font-size: 0.9rem; font-weight: 600; color: #58a6ff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .dark-card ul { list-style: none; padding: 0; margin: 0; }
+        .dark-card ul li { font-size: 0.88rem; color: #8b949e; padding: 5px 0 5px 18px; position: relative; line-height: 1.5; }
+        .dark-card ul li::before { content: '→'; position: absolute; left: 0; color: #58a6ff; }
+        .challenge-text { font-size: 0.95rem; color: #8b949e; line-height: 1.8; }
+        .stat-card { background: rgba(22,27,34,0.7); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 28px 20px; text-align: center; }
+        .stat-number { font-size: 2.2rem; font-weight: 800; color: #10b981; line-height: 1; margin-bottom: 8px; }
+        .stat-label { font-size: 0.78rem; color: #6e7681; }
+        .bottom-nav { background: rgba(8,12,18,0.95); border-top: 1px solid rgba(255,255,255,0.06); padding: 20px 0; }
+        .btn-back { color: #8b949e; text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .btn-back:hover { color: #58a6ff; }
+        .btn-linkedin { background: transparent; border: 1px solid rgba(88,166,255,0.3); color: #58a6ff; padding: 8px 20px; border-radius: 8px; font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+        .btn-linkedin:hover { background: rgba(88,166,255,0.1); border-color: #58a6ff; }
+        .divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 0; }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="nav-brand">← Portfolio</a>
+            <div class="nav-links">
+                <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="OfirHalbershtatCV.pdf">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-eyebrow">Project 04 · Identity & Access</div>
+            <div class="hero-title">Entra ID Zero Trust<br>IAM Modernization</div>
+            <div class="hero-sub">OwnBackup · Product Security Team Leader · 2023</div>
+            <span class="metric-hero">100% MFA coverage · 60% ↓ privileged accounts</span>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Stack</div>
+            <div class="section-heading">Tools & Technologies</div>
+            <div class="section-line"></div>
+            <div>
+                <span class="tool-badge">Entra ID PIM</span>
+                <span class="tool-badge">Conditional Access</span>
+                <span class="tool-badge">MFA/RBAC</span>
+                <span class="tool-badge">SSO SAML</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Problem</div>
+            <div class="section-heading">Challenge</div>
+            <div class="section-line"></div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="challenge-text">Sprawling identity landscape with legacy authentication protocols, persistent privileged accounts, and no centralized access governance across 10+ integrated identity providers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Approach</div>
+            <div class="section-heading">Solution</div>
+            <div class="section-line"></div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h5>Identity Hardening</h5>
+                        <ul>
+                            <li>Enforced MFA across all users, killed legacy auth protocols</li>
+                            <li>SAML SSO rollout across 10+ identity providers</li>
+                            <li>RBAC model standardized organization-wide</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h5>Privileged Access</h5>
+                        <ul>
+                            <li>PIM enabled for all admin roles with JIT activation</li>
+                            <li>Conditional Access policies for risk-based step-up auth</li>
+                            <li>60% reduction in standing privileged accounts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Impact</div>
+            <div class="section-heading">Results</div>
+            <div class="section-line"></div>
+            <div class="row g-4">
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">MFA coverage</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">60%</div><div class="stat-label">↓ Privileged accounts</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Identity providers unified</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Legacy auth paths</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="btn-back">← Back to All Projects</a>
+            <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener" class="btn-linkedin">Contact on LinkedIn</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
