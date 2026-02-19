@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\97254\\\\Dev\\\\Git.portfolio\\\\MyPortfolio\\\\proj*.html\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\97254\\\\Dev\\\\Git.portfolio\\\\MyPortfolio\"\")",
+      "Bash(cmd.exe /c dir \"C:\\\\Users\\\\97254\\\\Dev\\\\Git.portfolio\\\\MyPortfolio\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\97254\\\\Dev\\\\Git.portfolio\\\\MyPortfolio 2>&1\")"
+    ]
+  }
+}
