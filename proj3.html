@@ -21,9 +21,9 @@
 
     <section class="hero">
         <div class="container hero-inner">
-            <div class="hero-eyebrow">Project 03 · DevSecOps</div>
-            <div class="hero-title">Snyk + SonarQube<br>DevSecOps Pipeline</div>
-            <div class="hero-sub">OwnBackup · Product Security Team Leader · 2023</div>
+            <div class="hero-eyebrow">Project 03 · Secure Software Delivery Pipeline </div>
+            <div class="hero-title">DevSecOps Pipeline with Software Supply Chain Controls</div>
+            <div class="hero-sub">OwnBackup · Product Security Team Leader · 2021</div>
             <span class="metric-hero">Zero critical vulns in prod · 40% faster releases</span>
         </div>
     </section>
@@ -35,9 +35,11 @@
             <div class="section-label">Stack</div>
             <div class="section-line"></div>
             <div>
+                <span class="tool-badge">Sonatype Nexus Firewall</span>
                 <span class="tool-badge">Snyk SCA</span>
                 <span class="tool-badge">SonarQube SAST</span>
-                <span class="tool-badge">Sonatype Nexus Firewall</span>
+                <span class="tool-badge">Container images scaning</span>                
+                <span class="tool-badge">Burp Suite DAST</span>
                 <span class="tool-badge">GitHub Actions</span>
             </div>
         </div>
@@ -52,7 +54,63 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="dark-card">
-                        <p class="challenge-text">Developers were shipping code without automated security gates. Vulnerable third-party packages, SAST findings, and malicious open-source libraries had no detection layer in the CI/CD pipeline.</p>
+                        <p class="challenge-text">Engineers bypassed security by pulling packages directly from the internet and merging code without consistent AppSec gates. We needed a secure software factory that controlled the entire software supply chain—from package intake to production deployment—while maintaining developer velocity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+<!-- Security Domains -->
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Security Domains &amp; Risk Coverage</div>
+            <div class="section-line"></div>
+            <div class="row g-3 mt-3" id="domains-cards">
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Software Supply Chain Security</h6>
+                        <ul class="small mb-0">
+                            <li>Protected Nexus repository as single source of truth for all OSS packages</li>
+                            <li>Pre-ingestion scanning to block malicious/vulnerable components</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Code & Dependency Security</h6>
+                        <ul class="small mb-0">
+                            <li>SonarQube SAST for code vulnerabilities & quality gates</li>
+                            <li>Snyk SCA for OSS dependencies, transitive vulns, license compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Container Security</h6>
+                        <ul class="small mb-0">
+                            <li>Kubernetes image vulnerability scanning at merge time</li>
+                            <li>Runtime container misconfiguration detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Application & API Security</h6>
+                        <ul class="small mb-0">
+                            <li>Burp Suite DAST on candidate branches for web/API vulnerabilities</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Risk Governance</h6>
+                        <ul class="small mb-0">
+                            <li>Automated severity-based Jira ticketing with SLAs</li>
+                            <li>Pragmatic merge policy (fail only criticals, track everything)</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -68,21 +126,22 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="dark-card">
-                        <h5>Pipeline Integration</h5>
+                        <h5>Pipeline 1 – Secure Package Factory (Nexus)</h5>
                         <ul>
-                            <li>Snyk SCA integrated into GitHub Actions for all PRs</li>
-                            <li>SonarQube SAST gates blocking critical findings</li>
-                            <li>Remediation SLAs enforced via Jira automation</li>
+                            <li>Enforced all OSS packages route through internal Nexus Repository Firewall</li>
+                            <li>Blocked direct npm/pypi/maven pulls from public registries</li>
+                            <li>Pre-scanned every package before allowing consumption in builds</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="dark-card">
-                        <h5>Supply Chain Defense</h5>
+                        <h5>Pipeline 2 – AppSec Merge Gates</h5>
                         <ul>
-                            <li>Sonatype Nexus Firewall on all package registries</li>
-                            <li>Malicious package detection at download time</li>
-                            <li>95% code coverage enforced per repository</li>
+                            <li>Integrated SAST (SonarQube), SCA (Snyk), K8s image scanning at merge</li>
+                            <li>Auto-created Jira tickets for all new vulns with team assignment</li>
+                            <li>Hard fail policy: Critical only → High/Medium tracked via SLAs</li>
+                            <li>DAST layer: Burp Suite on candidate branches for API/web issues</li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +159,7 @@
                 <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Critical vulns in prod</div></div></div>
                 <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">Faster release cycles</div></div></div>
                 <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Code coverage</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">PR security gating</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">97%</div><div class="stat-label">PR security gating</div></div></div>
             </div>
         </div>
     </div>

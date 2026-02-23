@@ -259,7 +259,7 @@ body {
 .card-domain-icon { color: #58a6ff; }
 .card-domain-icon svg { width: 42px; height: 42px; display: block; }
 .card-tool-icons { display: flex; flex-direction: column; gap: 10px; align-items: center; }
-.card-tool-icons img { width: 44px; height: 44px; opacity: 0.85; display: block; }
+.card-tool-icons img { width: 36px; height: 36px; opacity: 0.9; display: block; } 
 .tool-icon-letter {
     width: 44px; height: 44px;
     background: rgba(88,166,255,0.08);
