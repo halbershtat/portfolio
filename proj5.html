@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splunk Detection Platform | Ofir Halbershtat</title>
+    <title>Cribl + Splunk Detection Platform | Ofir Halbershtat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="project.css">
@@ -22,9 +22,9 @@
     <section class="hero">
         <div class="container hero-inner">
             <div class="hero-eyebrow">Project 05 · Detection & Response</div>
-            <div class="hero-title">Splunk Unified<br>Detection Platform</div>
+            <div class="hero-title">Security Data Operations & Unified Threat Detection<br>Detection Platform</div>
             <div class="hero-sub">OwnBackup · Product Security Team Leader · 2024</div>
-            <span class="metric-hero">50% faster MTTR · 87% SLA compliance</span>
+            <span class="metric-hero">50% faster MTTR · 90% SLA compliance · Cost-controlled scaling</span>
         </div>
     </section>
 
@@ -35,11 +35,10 @@
             <div class="section-label">Stack</div>
             <div class="section-line"></div>
             <div>
-                <span class="tool-badge">Splunk</span>
-                <span class="tool-badge">Azure Defender</span>
-                <span class="tool-badge">AWS GuardDuty</span>
-                <span class="tool-badge">CrowdStrike</span>
-                <span class="tool-badge">Wiz</span>
+                <span class="tool-badge">Cribl Stream</span>
+                <span class="tool-badge">Splunk SIEM</span>
+                <span class="tool-badge">Slack</span>
+                <span class="tool-badge">PagerDuty</span>
             </div>
         </div>
     </div>
@@ -53,7 +52,49 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="dark-card">
-                        <p class="challenge-text">Security telemetry was siloed across Azure Defender, GuardDuty, CrowdStrike, and Wiz with no unified detection layer. Analysts had no single pane of glass, leading to slow detection and inconsistent SLA tracking.</p>
+                        <p class="challenge-text">Fragmented security telemetry across siloed systems created detection gaps, slow investigations, and exploding SIEM costs. Needed a scalable architecture where Cribl optimized data at the pipeline layer and Splunk served as the authoritative SIEM — enabling high-fidelity detection without uncapped ingestion costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Security Domains -->
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Security Domains &amp; Risk Coverage</div>
+            <div class="section-line"></div>
+            <div class="row g-3 mt-3" id="domains-cards">
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Data Silos &amp; Ingestion Chaos</h6>
+                        <ul class="small mb-0">
+                            <li>Unstructured logs impossible to correlate across identity, endpoint, and cloud</li>
+                            <li>No ingestion volume control or data quality standards</li>
+                            <li>Analysts hunting across disconnected dashboards with no unified view</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Detection &amp; Investigation Gaps</h6>
+                        <ul class="small mb-0">
+                            <li>No centralized analytics for threat correlation or behavioral baselines</li>
+                            <li>Slow root-cause analysis due to fragmented evidence across tools</li>
+                            <li>Limited threat hunting capabilities without unified telemetry</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">SOC Operations &amp; Compliance</h6>
+                        <ul class="small mb-0">
+                            <li>No unified platform for SOC workflows, SLA tracking, or reporting</li>
+                            <li>Compliance evidence scattered across multiple systems</li>
+                            <li>Inconsistent escalation processes and on-call response gaps</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -69,21 +110,41 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="dark-card">
-                        <h5>Data Ingestion</h5>
+                        <h5>Cribl Telemetry Pipeline</h5>
                         <ul>
-                            <li>Ingested Defender, GuardDuty, CrowdStrike, and Wiz into Splunk</li>
-                            <li>Normalized event schemas for cross-source correlation</li>
-                            <li>Unified dashboards for SOC visibility</li>
+                            <li>Centralized ingestion with schema normalization (JSON / common fields)</li>
+                            <li>Noise filtering, sampling, and field reduction for SIEM cost control</li>
+                            <li>High-value events routed to Splunk; bulk logs tiered to cheap storage</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="dark-card">
-                        <h5>Detection & Response</h5>
+                        <h5>Splunk Detection &amp; Analytics</h5>
                         <ul>
-                            <li>Custom SPL detection rules for anomalous IAM and behavior</li>
-                            <li>SOAR playbooks for automated triage and enrichment</li>
-                            <li>SLA tracking with alerting for breach prevention</li>
+                            <li>Cross-domain correlation rules across IAM, cloud, and endpoint threats</li>
+                            <li>Behavioral baselines and structured threat hunting workflows</li>
+                            <li>Fast timeline reconstruction for incident investigation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h5>SOC Operations Platform</h5>
+                        <ul>
+                            <li>Executive dashboards for KPIs, compliance posture, and reporting</li>
+                            <li>SLA tracking with automated breach-prevention alerts</li>
+                            <li>Unified SOC system of record across all telemetry sources</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card">
+                        <h5>Alerting &amp; Response</h5>
+                        <ul>
+                            <li>Real-time Slack triage alerts enriched with full incident context</li>
+                            <li>PagerDuty escalation for critical on-call response routing</li>
+                            <li>Automated workflows from detection → investigation → resolution</li>
                         </ul>
                     </div>
                 </div>
@@ -99,9 +160,10 @@
             <div class="section-line"></div>
             <div class="row g-4">
                 <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">50%</div><div class="stat-label">Faster MTTR</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">87%</div><div class="stat-label">SLA compliance</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">4</div><div class="stat-label">Sources unified in Splunk</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">90%</div><div class="stat-label">SLA compliance</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">85%</div><div class="stat-label">Regulatory compliance strengthened</div></div></div>
                 <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">SOC single pane of glass</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">↓ Cost</div><div class="stat-label">Controlled SIEM scaling</div></div></div>
             </div>
         </div>
     </div>
@@ -113,5 +175,16 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function equalizeDomainCards() {
+            const cards = document.querySelectorAll('#domains-cards .dark-card');
+            cards.forEach(c => c.style.height = 'auto');
+            let maxH = 0;
+            cards.forEach(c => maxH = Math.max(maxH, c.offsetHeight));
+            cards.forEach(c => c.style.height = maxH + 'px');
+        }
+        equalizeDomainCards();
+        window.addEventListener('resize', equalizeDomainCards);
+    </script>
 </body>
 </html>

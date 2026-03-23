@@ -94,12 +94,11 @@
                                     </div>
                                     <div class="card-icons">
                                         <div class="card-domain-icon">
-                                            <!-- Shield = Cloud Security Baseline -->
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                                         </div>
                                         <div class="card-tool-icons">
                                             <img src="assets/wiz-logo.svg" alt="Wiz" onerror="this.style.display='none'">
-                                            <img src="assets/GuardDuty-logo.svg" alt="Wiz" onerror="this.style.display='none'">
+                                            <img src="assets/GuardDuty-logo.svg" alt="GuardDuty" onerror="this.style.display='none'">
                                             <img src="https://cdn.simpleicons.org/jira" alt="Jira" onerror="this.style.display='none'">
                                             <img src="assets/slack-logo.svg" alt="Slack" onerror="this.style.display='none'">
                                         </div>
@@ -135,7 +134,6 @@
                                     </div>
                                     <div class="card-icons">
                                         <div class="card-domain-icon">
-                                            <!-- Lock = Zero Trust / Network Access -->
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                                         </div>
                                         <div class="card-tool-icons">
@@ -168,15 +166,14 @@
                                             <span class="tool-badge">GitHub Actions</span>
                                         </div>
                                         <ul class="card-bullets">
-                                            <li>Blocked PRs on critical SAST/SCA findings</li>
-                                            <li>Nexus Firewall blocked malicious packages</li>
-                                            <li>95% code coverage with remediation SLAs</li>
+                                            <li>Centralized AppSec gates (SAST, SCA, image scanning, DAST) in CI/CD</li>
+                                            <li>Nexus Repository Firewall enforced secure OSS intake only</li>
+                                            <li>Zero critical vulns reached production with ~95% service coverage</li>
                                         </ul>
                                         <span class="metric-pill">Zero critical vulns in prod · 40% faster releases</span>
                                     </div>
                                     <div class="card-icons">
                                         <div class="card-domain-icon">
-                                            <!-- Code brackets = DevSecOps Pipeline -->
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                                         </div>
                                         <div class="card-tool-icons">
@@ -200,25 +197,25 @@
                             <div class="card-inner">
                                 <div class="card-row">
                                     <div class="card-left">
-                                        <div class="card-num">Project 04</div>
-                                        <div class="card-title">Entra ID Zero Trust IAM Modernization</div>
+                                        <div class="card-num">Project 04 · Zero Trust Architecture</div>
+                                        <div class="card-title">Zero Trust Architecture Maturation</div>
                                         <div class="card-meta">OwnBackup · Product Security TL · 2023</div>
                                         <div>
-                                            <span class="tool-badge">Entra ID PIM</span>
-                                            <span class="tool-badge">Conditional Access</span>
-                                            <span class="tool-badge">MFA/RBAC</span>
-                                            <span class="tool-badge">SSO SAML</span>
+                                            <span class="tool-badge">Okta</span>
+                                            <span class="tool-badge">SAML Federation</span>
+                                            <span class="tool-badge">MFA Policies</span>
+                                            <span class="tool-badge">Azure CLI</span>
+                                            <span class="tool-badge">Wiz</span>
                                         </div>
                                         <ul class="card-bullets">
-                                            <li>Enforced MFA everywhere, killed legacy auth</li>
-                                            <li>PIM + Conditional Access for JIT admin access</li>
-                                            <li>RBAC across 10+ identity providers</li>
+                                            <li>Federated 10 Azure accounts to Okta via SAML</li>
+                                            <li>100% MFA + Conditional Access across all Azure services</li>
+                                            <li>Eliminated all local accounts via SCIM automation</li>
                                         </ul>
-                                        <span class="metric-pill">100% MFA coverage · 60% ↓ privileged accounts</span>
+                                        <span class="metric-pill">99% Azure SSO coverage · 100% MFA · 40% efficiency gain</span>
                                     </div>
                                     <div class="card-icons">
                                         <div class="card-domain-icon">
-                                            <!-- Key = IAM / Identity -->
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="M21 2l-9.6 9.6"/><path d="M15.5 7.5l3 3L22 7l-3-3"/></svg>
                                         </div>
                                         <div class="card-tool-icons">
@@ -232,29 +229,28 @@
                     </a>
                 </div>
 
-                <!-- 5 -->
+                <!-- 5 — UPDATED -->
                 <div class="col-lg-6 col-md-6">
                     <a href="proj5.html" class="card-link">
                         <div class="project-card">
                             <div class="card-inner">
                                 <div class="card-row">
                                     <div class="card-left">
-                                        <div class="card-num">Project 05</div>
-                                        <div class="card-title">Splunk Unified Detection Platform</div>
+                                        <div class="card-num">Project 05 · Detection &amp; Response</div>
+                                        <div class="card-title">Security Data Operations & Unified Threat Detectionm</div>
                                         <div class="card-meta">OwnBackup · Product Security TL · 2024</div>
                                         <div>
-                                            <span class="tool-badge">Splunk</span>
-                                            <span class="tool-badge">Azure Defender</span>
-                                            <span class="tool-badge">GuardDuty</span>
-                                            <span class="tool-badge">CrowdStrike</span>
-                                            <span class="tool-badge">Wiz</span>
+                                            <span class="tool-badge">Cribl Stream</span>
+                                            <span class="tool-badge">Splunk SIEM</span>
+                                            <span class="tool-badge">Slack</span>
+                                            <span class="tool-badge">PagerDuty</span>
                                         </div>
                                         <ul class="card-bullets">
-                                            <li>Ingested Defender/GuardDuty/CrowdStrike/Wiz telemetry</li>
-                                            <li>Custom detection rules for anomalous IAM/behavior</li>
-                                            <li>Unified dashboards + SOAR workflows</li>
+                                            <li>Cribl pipeline for schema normalization, noise filtering &amp; cost tiering</li>
+                                            <li>Cross-domain Splunk correlation rules (IAM + cloud + endpoint)</li>
+                                            <li>Slack + PagerDuty automated alerting &amp; on-call escalation</li>
                                         </ul>
-                                        <span class="metric-pill">50% faster MTTR · 87% SLA compliance</span>
+                                        <span class="metric-pill">50% faster MTTR · 90% SLA compliance · Cost-controlled scaling</span>
                                     </div>
                                     <div class="card-icons">
                                         <div class="card-domain-icon">
@@ -263,8 +259,8 @@
                                         </div>
                                         <div class="card-tool-icons">
                                             <img src="assets/SPLK_BIG.D.svg" alt="Splunk" onerror="this.style.display='none'">
-                                            <img src="https://cdn.simpleicons.org/crowdstrike" alt="CrowdStrike" onerror="this.style.display='none'">
-                                            <img src="https://cdn.simpleicons.org/amazonaws" alt="AWS" onerror="this.style.display='none'">
+                                            <img src="assets/pagerduty-seeklogo.svg" alt="PagerDuty" onerror="this.style.display='none'">
+                                            <img src="assets/slack-logo.svg" alt="Slack" onerror="this.style.display='none'">
                                         </div>
                                     </div>
                                 </div>
@@ -302,7 +298,7 @@
                                         </div>
                                         <div class="card-tool-icons">
                                             <img src="https://cdn.simpleicons.org/cisco" alt="Cisco" onerror="this.style.display='none'">
-                                            <span class="tool-icon-letter">ME</span><!-- ManageEngine -->
+                                            <span class="tool-icon-letter">ME</span>
                                         </div>
                                     </div>
                                 </div>

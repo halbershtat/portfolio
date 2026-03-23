@@ -62,6 +62,58 @@
 
     <hr class="divider">
 
+    <!-- Security Domains -->
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Security Domains &amp; Risk Coverage</div>
+            <div class="section-line"></div>
+            <div class="row g-3 mt-3" id="domains-cards">
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Network Access Control</h6>
+                        <ul class="small mb-0">
+                            <li>Cloudflare Tunnels replacing VPN for 100+ internal applications</li>
+                            <li>Per-app micro-segmentation instead of broad network access</li>
+                            <li>Elimination of inbound firewall rules and exposed ports</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Identity &amp; Device Trust</h6>
+                        <ul class="small mb-0">
+                            <li>Entra ID SSO integration for identity-aware access</li>
+                            <li>Device posture enforcement via Cloudflare WARP client</li>
+                            <li>JIT access provisioning with time-bound sessions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">DNS &amp; HTTP Security</h6>
+                        <ul class="small mb-0">
+                            <li>Cloudflare Gateway DNS filtering for all user traffic</li>
+                            <li>HTTP inspection policies for threat prevention</li>
+                            <li>Shadow IT and malicious domain blocking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Access Policy Governance</h6>
+                        <ul class="small mb-0">
+                            <li>Terraform-managed policy lifecycle (version-controlled, auditable)</li>
+                            <li>RBAC-based access rules per application and user group</li>
+                            <li>Automated deprovisioning to eliminate orphaned access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
     <div class="content-section">
         <div class="container">
             <div class="section-label">Implementation</div>
@@ -114,5 +166,16 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function equalizeDomainCards() {
+            const cards = document.querySelectorAll('#domains-cards .dark-card');
+            cards.forEach(c => c.style.height = 'auto');
+            let maxH = 0;
+            cards.forEach(c => maxH = Math.max(maxH, c.offsetHeight));
+            cards.forEach(c => c.style.height = maxH + 'px');
+        }
+        equalizeDomainCards();
+        window.addEventListener('resize', equalizeDomainCards);
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entra ID IAM Modernization | Ofir Halbershtat</title>
+    <title>Zero Trust Architecture Maturation | Ofir Halbershtat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="project.css">
@@ -21,10 +21,10 @@
 
     <section class="hero">
         <div class="container hero-inner">
-            <div class="hero-eyebrow">Project 04 · Identity & Access</div>
-            <div class="hero-title">Entra ID Zero Trust<br>IAM Modernization</div>
+            <div class="hero-eyebrow">Project 04 · Zero Trust Architecture</div>
+            <div class="hero-title">Zero Trust Architecture<br>Maturation</div>
             <div class="hero-sub">OwnBackup · Product Security Team Leader · 2023</div>
-            <span class="metric-hero">100% MFA coverage · 60% ↓ privileged accounts</span>
+            <span class="metric-hero">99% Azure SSO coverage · 100% MFA · 40% efficiency gain</span>
         </div>
     </section>
 
@@ -35,10 +35,12 @@
             <div class="section-label">Stack</div>
             <div class="section-line"></div>
             <div>
-                <span class="tool-badge">Entra ID PIM</span>
-                <span class="tool-badge">Conditional Access</span>
-                <span class="tool-badge">MFA/RBAC</span>
-                <span class="tool-badge">SSO SAML</span>
+                <span class="tool-badge">Okta</span>
+                <span class="tool-badge">SAML Federation</span>
+                <span class="tool-badge">MFA Policies</span>
+                <span class="tool-badge">Group Sync</span>
+                <span class="tool-badge">Azure CLI</span>
+                <span class="tool-badge">Wiz</span>
             </div>
         </div>
     </div>
@@ -52,7 +54,59 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="dark-card">
-                        <p class="challenge-text">Sprawling identity landscape with legacy authentication protocols, persistent privileged accounts, and no centralized access governance across 10+ integrated identity providers.</p>
+                        <p class="challenge-text">10 Azure accounts (user + service accounts) managed independently with local auth, creating compliance gaps, management overhead, and no alignment with company RBAC. Needed a cloud-agnostic identity platform supporting Azure/AWS/GCP equally while reducing Microsoft vendor lock-in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Security Domains -->
+    <div class="content-section">
+        <div class="container">
+            <div class="section-label">Security Domains &amp; Risk Coverage</div>
+            <div class="section-line"></div>
+            <div class="row g-3 mt-3" id="domains-cards">
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Identity Federation &amp; SSO</h6>
+                        <ul class="small mb-0">
+                            <li>SAML federation from Okta to 10 Azure accounts/tenants</li>
+                            <li>Centralized authentication across IaaS + PaaS services</li>
+                            <li>99% SSO coverage eliminating local account sprawl</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Access Control &amp; Governance</h6>
+                        <ul class="small mb-0">
+                            <li>Okta RBAC structure applied consistently to Azure resources</li>
+                            <li>Group sync ensuring least privilege across all services</li>
+                            <li>Automated provisioning/deprovisioning via Okta SCIM sync</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Zero Trust Controls</h6>
+                        <ul class="small mb-0">
+                            <li>MFA enforcement across all Azure access (100% coverage)</li>
+                            <li>Conditional Access policies (location, device compliance)</li>
+                            <li>Just-in-time privileged access via Okta workflows</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dark-card h-100">
+                        <h6 class="mb-3 fw-semibold">Service Account Management</h6>
+                        <ul class="small mb-0">
+                            <li>Eliminated all local Azure service principals</li>
+                            <li>Centralized service account lifecycle in Okta</li>
+                            <li>Wiz integration for identity-context risk-based decisions</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -68,21 +122,24 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="dark-card">
-                        <h5>Identity Hardening</h5>
+                        <h5>Federation &amp; Integration</h5>
                         <ul>
-                            <li>Enforced MFA across all users, killed legacy auth protocols</li>
-                            <li>SAML SSO rollout across 10+ identity providers</li>
-                            <li>RBAC model standardized organization-wide</li>
+                            <li>Connected 10 Azure accounts to Okta via SAML federation using Azure CLI</li>
+                            <li>Configured Okta MFA policies, app assignments, and group sync for all Azure services (IaaS/PaaS)</li>
+                            <li>Integrated Wiz findings with Okta identity context for risk-based access decisions</li>
+                            <li>Migrated all local accounts to Okta (service + user accounts)</li>
+                            <li>Automated group provisioning/deprovisioning via Okta SCIM sync</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="dark-card">
-                        <h5>Privileged Access</h5>
+                        <h5>Zero Trust Controls</h5>
                         <ul>
-                            <li>PIM enabled for all admin roles with JIT activation</li>
-                            <li>Conditional Access policies for risk-based step-up auth</li>
-                            <li>60% reduction in standing privileged accounts</li>
+                            <li>Enforced 100% MFA coverage across all Azure access points</li>
+                            <li>Implemented Conditional Access policies based on location and device compliance</li>
+                            <li>Established just-in-time privileged access workflows through Okta</li>
+                            <li>Applied company RBAC structure eliminating local Azure account sprawl</li>
                         </ul>
                     </div>
                 </div>
@@ -97,10 +154,10 @@
             <div class="section-label">Business Impact</div>
             <div class="section-line"></div>
             <div class="row g-4">
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">MFA coverage</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">60%</div><div class="stat-label">↓ Privileged accounts</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Identity providers unified</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Legacy auth paths</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">99%</div><div class="stat-label">Azure SSO coverage</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">MFA enforced</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Local accounts remaining</div></div></div>
+                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">Access efficiency gain</div></div></div>
             </div>
         </div>
     </div>
@@ -112,5 +169,16 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function equalizeDomainCards() {
+            const cards = document.querySelectorAll('#domains-cards .dark-card');
+            cards.forEach(c => c.style.height = 'auto');
+            let maxH = 0;
+            cards.forEach(c => maxH = Math.max(maxH, c.offsetHeight));
+            cards.forEach(c => c.style.height = maxH + 'px');
+        }
+        equalizeDomainCards();
+        window.addEventListener('resize', equalizeDomainCards);
+    </script>
 </body>
 </html>
