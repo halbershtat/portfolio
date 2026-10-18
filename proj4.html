@@ -1,175 +1,164 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Trust Architecture Maturation | Ofir Halbershtat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="project.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zero Trust Architecture Maturation | Ofir Halbershtat</title>
+<link href="assets/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="project.css" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="nav-brand">← Portfolio</a>
-            <div class="nav-links">
-                <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="OfirHalbershtatCV.pdf">Resume</a>
-            </div>
-        </div>
-    </nav>
+<nav class="top-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="nav-brand" href="index.html">← Portfolio</a>
+<div class="nav-links">
+<a href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">LinkedIn</a>
+<a href="OfirHalbershtatCV.pdf">Resume</a>
+</div>
+</div>
+</nav>
+<section class="hero">
+<div class="container hero-inner">
+<div class="hero-eyebrow">Project 04 · Zero Trust Architecture</div>
+<div class="hero-title">Zero Trust Architecture Maturation</div>
+<div class="hero-sub">Product Security Team Leader</div>
+<span class="metric-hero">99% Azure SSO coverage · 100% MFA · 40% efficiency gain</span>
+</div>
+</section>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Stack</div>
+<div class="section-line"></div>
+<div>
 
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-eyebrow">Project 04 · Zero Trust Architecture</div>
-            <div class="hero-title">Zero Trust Architecture<br>Maturation</div>
-            <div class="hero-sub">OwnBackup · Product Security Team Leader · 2023</div>
-            <span class="metric-hero">99% Azure SSO coverage · 100% MFA · 40% efficiency gain</span>
-        </div>
-    </section>
 
-    <hr class="divider">
 
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Stack</div>
-            <div class="section-line"></div>
-            <div>
-                <span class="tool-badge">Okta</span>
-                <span class="tool-badge">SAML Federation</span>
-                <span class="tool-badge">MFA Policies</span>
-                <span class="tool-badge">Group Sync</span>
-                <span class="tool-badge">Azure CLI</span>
-                <span class="tool-badge">Wiz</span>
-            </div>
-        </div>
-    </div>
 
-    <hr class="divider">
 
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Challenge</div>
-            <div class="section-line"></div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="dark-card">
-                        <p class="challenge-text">10 Azure accounts (user + service accounts) managed independently with local auth, creating compliance gaps, management overhead, and no alignment with company RBAC. Needed a cloud-agnostic identity platform supporting Azure/AWS/GCP equally while reducing Microsoft vendor lock-in.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <hr class="divider">
-
-    <!-- Security Domains -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Security Domains &amp; Risk Coverage</div>
-            <div class="section-line"></div>
-            <div class="row g-3 mt-3" id="domains-cards">
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Identity Federation &amp; SSO</h6>
-                        <ul class="small mb-0">
-                            <li>SAML federation from Okta to 10 Azure accounts/tenants</li>
-                            <li>Centralized authentication across IaaS + PaaS services</li>
-                            <li>99% SSO coverage eliminating local account sprawl</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Access Control &amp; Governance</h6>
-                        <ul class="small mb-0">
-                            <li>Okta RBAC structure applied consistently to Azure resources</li>
-                            <li>Group sync ensuring least privilege across all services</li>
-                            <li>Automated provisioning/deprovisioning via Okta SCIM sync</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Zero Trust Controls</h6>
-                        <ul class="small mb-0">
-                            <li>MFA enforcement across all Azure access (100% coverage)</li>
-                            <li>Conditional Access policies (location, device compliance)</li>
-                            <li>Just-in-time privileged access via Okta workflows</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Service Account Management</h6>
-                        <ul class="small mb-0">
-                            <li>Eliminated all local Azure service principals</li>
-                            <li>Centralized service account lifecycle in Okta</li>
-                            <li>Wiz integration for identity-context risk-based decisions</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Implementation</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Federation &amp; Integration</h5>
-                        <ul>
-                            <li>Connected 10 Azure accounts to Okta via SAML federation using Azure CLI</li>
-                            <li>Configured Okta MFA policies, app assignments, and group sync for all Azure services (IaaS/PaaS)</li>
-                            <li>Integrated Wiz findings with Okta identity context for risk-based access decisions</li>
-                            <li>Migrated all local accounts to Okta (service + user accounts)</li>
-                            <li>Automated group provisioning/deprovisioning via Okta SCIM sync</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Zero Trust Controls</h5>
-                        <ul>
-                            <li>Enforced 100% MFA coverage across all Azure access points</li>
-                            <li>Implemented Conditional Access policies based on location and device compliance</li>
-                            <li>Established just-in-time privileged access workflows through Okta</li>
-                            <li>Applied company RBAC structure eliminating local Azure account sprawl</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Business Impact</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">99%</div><div class="stat-label">Azure SSO coverage</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">MFA enforced</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Local accounts remaining</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">Access efficiency gain</div></div></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="btn-back">← Back to All Projects</a>
-            <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener" class="btn-linkedin">Contact on LinkedIn</a>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+<span class="tool-badge">Identity Federation</span> <span class="tool-badge">MFA</span> <span class="tool-badge">Access Governance</span> </div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Challenge</div>
+<div class="section-line"></div>
+<div class="row">
+<div class="col-lg-8">
+<div class="dark-card">
+<p class="challenge-text">A multi-cloud organization needed consistent identity governance and access lifecycle management while reducing administrative overhead.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- Security Domains -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Security Domains &amp; Risk Coverage</div>
+<div class="section-line"></div>
+<div class="row g-3 mt-3" id="domains-cards">
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Identity Federation &amp; SSO</h6>
+<ul class="small mb-0">
+<li>Enterprise identity federation</li>
+<li>Consistent authentication governance across cloud services</li>
+<li>Expanded single sign-on coverage</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Access Control &amp; Governance</h6>
+<ul class="small mb-0">
+<li>Role-based access governance</li>
+<li>Least-privilege lifecycle management</li>
+<li>Automated provisioning and deprovisioning</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Zero Trust Controls</h6>
+<ul class="small mb-0">
+<li>Expanded multi-factor authentication</li>
+<li>Context-aware access policies</li>
+<li>Just-in-time privileged access controls</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Service Account Management</h6>
+<ul class="small mb-0">
+<li>Strengthened service identity governance</li>
+<li>Centralized identity lifecycle management</li>
+<li>Risk-informed access decisions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Implementation</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Federation &amp; Integration</h5>
+<ul>
+<li>Led enterprise identity federation</li>
+<li>Established consistent authentication and access policies</li>
+<li>Integrated security context into access governance</li>
+<li>Consolidated identity lifecycle management</li>
+<li>Automated access provisioning and removal</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Zero Trust Controls</h5>
+<ul>
+<li>Expanded multi-factor authentication</li>
+<li>Established context-aware access controls</li>
+<li>Implemented privileged access governance</li>
+<li>Aligned access roles with organizational responsibilities</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Business Impact</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">99%</div><div class="stat-label">Azure SSO coverage</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">MFA enforced</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Local accounts remaining</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">Access efficiency gain</div></div></div>
+</div>
+</div>
+</div>
+<div class="bottom-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="btn-back" href="index.html">← Back to All Projects</a>
+<a class="btn-linkedin" href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">Contact on LinkedIn</a>
+</div>
+</div>
+<script src="assets/bootstrap.bundle.min.js"></script>
+<script>
         function equalizeDomainCards() {
             const cards = document.querySelectorAll('#domains-cards .dark-card');
             cards.forEach(c => c.style.height = 'auto');

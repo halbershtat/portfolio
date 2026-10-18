@@ -1,172 +1,159 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudflare Zero Trust | Ofir Halbershtat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="project.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Enterprise Zero Trust Access | Ofir Halbershtat</title>
+<link href="assets/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="project.css" rel="stylesheet"/>
 </head>
 <body>
+<nav class="top-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="nav-brand" href="index.html">← Portfolio</a>
+<div class="nav-links">
+<a href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">LinkedIn</a>
+<a href="OfirHalbershtatCV.pdf">Resume</a>
+</div>
+</div>
+</nav>
+<section class="hero">
+<div class="container hero-inner">
+<div class="hero-eyebrow">Project 02 · Zero Trust</div>
+<div class="hero-title">Enterprise Zero Trust Access</div>
+<div class="hero-sub">Security Consulting</div>
+<span class="metric-hero">100% VPN elimination · 85% faster access provisioning</span>
+</div>
+</section>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Stack</div>
+<div class="section-line"></div>
+<div>
 
-    <nav class="top-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="nav-brand">← Portfolio</a>
-            <div class="nav-links">
-                <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="OfirHalbershtatCV.pdf">Resume</a>
-            </div>
-        </div>
-    </nav>
 
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-eyebrow">Project 02 · Zero Trust</div>
-            <div class="hero-title">Cloudflare Zero Trust<br>→ VPN Replacement</div>
-            <div class="hero-sub">Consulting · 2025</div>
-            <span class="metric-hero">100% VPN elimination · 85% faster access provisioning</span>
-        </div>
-    </section>
 
-    <hr class="divider">
 
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Stack</div>
-            <div class="section-line"></div>
-            <div>
-                <span class="tool-badge">Cloudflare Zero Trust</span>
-                <span class="tool-badge">Terraform</span>
-                <span class="tool-badge">Bash</span>
-                <span class="tool-badge">PowerShell</span>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Challenge</div>
-            <div class="section-line"></div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="dark-card">
-                        <p class="challenge-text">Client relied on legacy VPN infrastructure that created performance bottlenecks, introduced excessive implicit trust, and made access provisioning slow and error-prone across 100+ internal applications.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Security Domains -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Security Domains &amp; Risk Coverage</div>
-            <div class="section-line"></div>
-            <div class="row g-3 mt-3" id="domains-cards">
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Network Access Control</h6>
-                        <ul class="small mb-0">
-                            <li>Cloudflare Tunnels replacing VPN for 100+ internal applications</li>
-                            <li>Per-app micro-segmentation instead of broad network access</li>
-                            <li>Elimination of inbound firewall rules and exposed ports</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Identity &amp; Device Trust</h6>
-                        <ul class="small mb-0">
-                            <li>Entra ID SSO integration for identity-aware access</li>
-                            <li>Device posture enforcement via Cloudflare WARP client</li>
-                            <li>JIT access provisioning with time-bound sessions</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">DNS &amp; HTTP Security</h6>
-                        <ul class="small mb-0">
-                            <li>Cloudflare Gateway DNS filtering for all user traffic</li>
-                            <li>HTTP inspection policies for threat prevention</li>
-                            <li>Shadow IT and malicious domain blocking</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Access Policy Governance</h6>
-                        <ul class="small mb-0">
-                            <li>Terraform-managed policy lifecycle (version-controlled, auditable)</li>
-                            <li>RBAC-based access rules per application and user group</li>
-                            <li>Automated deprovisioning to eliminate orphaned access</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Implementation</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Network Access</h5>
-                        <ul>
-                            <li>Deployed Cloudflare Tunnels for 100+ internal apps</li>
-                            <li>Configured Gateway policies for DNS/HTTP filtering</li>
-                            <li>Enforced identity-aware access with SSO integration</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Automation</h5>
-                        <ul>
-                            <li>Custom Terraform modules for access policy lifecycle</li>
-                            <li>Device posture checks via Cloudflare WARP client</li>
-                            <li>JIT access automation via PowerShell + API</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Business Impact</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">VPN elimination</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">85%</div><div class="stat-label">Faster access provisioning</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100+</div><div class="stat-label">Internal apps protected</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Implicit trust paths</div></div></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="btn-back">← Back to All Projects</a>
-            <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener" class="btn-linkedin">Contact on LinkedIn</a>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+<span class="tool-badge">Zero Trust</span> <span class="tool-badge">Infrastructure as Code</span> <span class="tool-badge">Identity &amp; Device Trust</span> </div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Challenge</div>
+<div class="section-line"></div>
+<div class="row">
+<div class="col-lg-8">
+<div class="dark-card">
+<p class="challenge-text">An enterprise needed to modernize remote access across a large internal application estate while improving access provisioning and user experience.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- Security Domains -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Security Domains &amp; Risk Coverage</div>
+<div class="section-line"></div>
+<div class="row g-3 mt-3" id="domains-cards">
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Network Access Control</h6>
+<ul class="small mb-0">
+<li>Application-scoped access across a large enterprise estate</li>
+<li>Least-privilege segmentation aligned to application needs</li>
+<li>Reduced unnecessary network exposure</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Identity &amp; Device Trust</h6>
+<ul class="small mb-0">
+<li>Identity-aware authentication</li>
+<li>Endpoint posture validation</li>
+<li>Time-bound access controls</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">DNS &amp; HTTP Security</h6>
+<ul class="small mb-0">
+<li>Protective web and name-resolution controls</li>
+<li>Threat prevention policy governance</li>
+<li>Controls for unauthorized services and malicious destinations</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Access Policy Governance</h6>
+<ul class="small mb-0">
+<li>Version-controlled policy management</li>
+<li>Role-based access governance</li>
+<li>Automated access lifecycle management</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Implementation</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Network Access</h5>
+<ul>
+<li>Architected enterprise Zero Trust access</li>
+<li>Integrated protective traffic controls</li>
+<li>Established identity-aware access policies</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Automation</h5>
+<ul>
+<li>Automated policy lifecycle management</li>
+<li>Integrated endpoint trust signals</li>
+<li>Automated just-in-time access provisioning</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Business Impact</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">VPN elimination</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">85%</div><div class="stat-label">Faster access provisioning</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Enterprise</div><div class="stat-label">Application access scope</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Implicit trust paths</div></div></div>
+</div>
+</div>
+</div>
+<div class="bottom-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="btn-back" href="index.html">← Back to All Projects</a>
+<a class="btn-linkedin" href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">Contact on LinkedIn</a>
+</div>
+</div>
+<script src="assets/bootstrap.bundle.min.js"></script>
+<script>
         function equalizeDomainCards() {
             const cards = document.querySelectorAll('#domains-cards .dark-card');
             cards.forEach(c => c.style.height = 'auto');

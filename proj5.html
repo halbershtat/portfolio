@@ -1,181 +1,170 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cribl + Splunk Detection Platform | Ofir Halbershtat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="project.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Security Data Operations &amp; Unified Threat Detection | Ofir Halbershtat</title>
+<link href="assets/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="project.css" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="nav-brand">← Portfolio</a>
-            <div class="nav-links">
-                <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="OfirHalbershtatCV.pdf">Resume</a>
-            </div>
-        </div>
-    </nav>
+<nav class="top-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="nav-brand" href="index.html">← Portfolio</a>
+<div class="nav-links">
+<a href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">LinkedIn</a>
+<a href="OfirHalbershtatCV.pdf">Resume</a>
+</div>
+</div>
+</nav>
+<section class="hero">
+<div class="container hero-inner">
+<div class="hero-eyebrow">Project 05 · Detection &amp; Response</div>
+<div class="hero-title">Security Data Operations &amp; Unified Threat Detection</div>
+<div class="hero-sub">Product Security Team Leader</div>
+<span class="metric-hero">50% faster MTTR · 90% SLA compliance · Cost-controlled scaling</span>
+</div>
+</section>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Stack</div>
+<div class="section-line"></div>
+<div>
 
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-eyebrow">Project 05 · Detection & Response</div>
-            <div class="hero-title">Security Data Operations & Unified Threat Detection<br>Detection Platform</div>
-            <div class="hero-sub">OwnBackup · Product Security Team Leader · 2024</div>
-            <span class="metric-hero">50% faster MTTR · 90% SLA compliance · Cost-controlled scaling</span>
-        </div>
-    </section>
 
-    <hr class="divider">
 
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Stack</div>
-            <div class="section-line"></div>
-            <div>
-                <span class="tool-badge">Cribl Stream</span>
-                <span class="tool-badge">Splunk SIEM</span>
-                <span class="tool-badge">Slack</span>
-                <span class="tool-badge">PagerDuty</span>
-            </div>
-        </div>
-    </div>
 
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Challenge</div>
-            <div class="section-line"></div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="dark-card">
-                        <p class="challenge-text">Fragmented security telemetry across siloed systems created detection gaps, slow investigations, and exploding SIEM costs. Needed a scalable architecture where Cribl optimized data at the pipeline layer and Splunk served as the authoritative SIEM — enabling high-fidelity detection without uncapped ingestion costs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Security Domains -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Security Domains &amp; Risk Coverage</div>
-            <div class="section-line"></div>
-            <div class="row g-3 mt-3" id="domains-cards">
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Data Silos &amp; Ingestion Chaos</h6>
-                        <ul class="small mb-0">
-                            <li>Unstructured logs impossible to correlate across identity, endpoint, and cloud</li>
-                            <li>No ingestion volume control or data quality standards</li>
-                            <li>Analysts hunting across disconnected dashboards with no unified view</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Detection &amp; Investigation Gaps</h6>
-                        <ul class="small mb-0">
-                            <li>No centralized analytics for threat correlation or behavioral baselines</li>
-                            <li>Slow root-cause analysis due to fragmented evidence across tools</li>
-                            <li>Limited threat hunting capabilities without unified telemetry</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">SOC Operations &amp; Compliance</h6>
-                        <ul class="small mb-0">
-                            <li>No unified platform for SOC workflows, SLA tracking, or reporting</li>
-                            <li>Compliance evidence scattered across multiple systems</li>
-                            <li>Inconsistent escalation processes and on-call response gaps</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Implementation</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Cribl Telemetry Pipeline</h5>
-                        <ul>
-                            <li>Centralized ingestion with schema normalization (JSON / common fields)</li>
-                            <li>Noise filtering, sampling, and field reduction for SIEM cost control</li>
-                            <li>High-value events routed to Splunk; bulk logs tiered to cheap storage</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Splunk Detection &amp; Analytics</h5>
-                        <ul>
-                            <li>Cross-domain correlation rules across IAM, cloud, and endpoint threats</li>
-                            <li>Behavioral baselines and structured threat hunting workflows</li>
-                            <li>Fast timeline reconstruction for incident investigation</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>SOC Operations Platform</h5>
-                        <ul>
-                            <li>Executive dashboards for KPIs, compliance posture, and reporting</li>
-                            <li>SLA tracking with automated breach-prevention alerts</li>
-                            <li>Unified SOC system of record across all telemetry sources</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Alerting &amp; Response</h5>
-                        <ul>
-                            <li>Real-time Slack triage alerts enriched with full incident context</li>
-                            <li>PagerDuty escalation for critical on-call response routing</li>
-                            <li>Automated workflows from detection → investigation → resolution</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Business Impact</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">50%</div><div class="stat-label">Faster MTTR</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">90%</div><div class="stat-label">SLA compliance</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">85%</div><div class="stat-label">Regulatory compliance strengthened</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">SOC single pane of glass</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">↓ Cost</div><div class="stat-label">Controlled SIEM scaling</div></div></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="btn-back">← Back to All Projects</a>
-            <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener" class="btn-linkedin">Contact on LinkedIn</a>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+<span class="tool-badge">Telemetry Engineering</span> <span class="tool-badge">SIEM</span> <span class="tool-badge">Incident Response</span> </div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Challenge</div>
+<div class="section-line"></div>
+<div class="row">
+<div class="col-lg-8">
+<div class="dark-card">
+<p class="challenge-text">A growing security operation needed better telemetry quality, unified investigations, and sustainable analytics costs.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- Security Domains -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Security Domains &amp; Risk Coverage</div>
+<div class="section-line"></div>
+<div class="row g-3 mt-3" id="domains-cards">
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Data Silos &amp; Ingestion Chaos</h6>
+<ul class="small mb-0">
+<li>Consistent telemetry quality across security domains</li>
+<li>Ingestion governance and cost management</li>
+<li>Unified investigation context</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Detection &amp; Investigation Gaps</h6>
+<ul class="small mb-0">
+<li>Cross-domain analytics and threat correlation</li>
+<li>Efficient evidence collection for investigations</li>
+<li>Structured threat hunting</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">SOC Operations &amp; Compliance</h6>
+<ul class="small mb-0">
+<li>Consistent incident response governance</li>
+<li>Accessible compliance evidence</li>
+<li>Coordinated response ownership</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Implementation</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Telemetry Engineering</h5>
+<ul>
+<li>Standardized security telemetry</li>
+<li>Optimized data quality and processing volume</li>
+<li>Established cost-aware retention governance</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Detection &amp; Analytics</h5>
+<ul>
+<li>Developed cross-domain detection analytics</li>
+<li>Established investigation and threat hunting practices</li>
+<li>Improved incident timeline reconstruction</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card">
+<h5>SOC Operations Platform</h5>
+<ul>
+<li>Built operational and executive reporting</li>
+<li>Established response performance tracking</li>
+<li>Unified security operations visibility</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Alerting &amp; Response</h5>
+<ul>
+<li>Automated incident triage support</li>
+<li>Coordinated response escalation</li>
+<li>Improved end-to-end incident workflows</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Business Impact</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">50%</div><div class="stat-label">Faster MTTR</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">90%</div><div class="stat-label">SLA compliance</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">85%</div><div class="stat-label">Regulatory compliance strengthened</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">SOC single pane of glass</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">↓ Cost</div><div class="stat-label">Controlled SIEM scaling</div></div></div>
+</div>
+</div>
+</div>
+<div class="bottom-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="btn-back" href="index.html">← Back to All Projects</a>
+<a class="btn-linkedin" href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">Contact on LinkedIn</a>
+</div>
+</div>
+<script src="assets/bootstrap.bundle.min.js"></script>
+<script>
         function equalizeDomainCards() {
             const cards = document.querySelectorAll('#domains-cards .dark-card');
             cards.forEach(c => c.style.height = 'auto');

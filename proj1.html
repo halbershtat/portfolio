@@ -1,190 +1,177 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiz Multi-Cloud Security | Ofir Halbershtat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="project.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Multi-Cloud Security Baseline | Ofir Halbershtat</title>
+<link href="assets/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="project.css" rel="stylesheet"/>
 </head>
 <body class="proj1">
+<nav class="top-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="nav-brand" href="index.html">← Portfolio</a>
+<div class="nav-links">
+<a href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">LinkedIn</a>
+<a href="OfirHalbershtatCV.pdf">Resume</a>
+</div>
+</div>
+</nav>
+<section class="hero">
+<div class="container hero-inner">
+<div class="hero-eyebrow">Project 01 · Cloud Security</div>
+<div class="hero-title">Multi-Cloud Security Baseline</div>
+<div class="hero-sub">Product Security Team Leader</div>
+<span class="metric-hero">70% ↓ high-risk misconfigs · 95% policy pass rate</span>
+</div>
+</section>
+<hr class="divider"/>
+<!-- Tools -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Stack</div>
+<div class="section-line"></div>
+<div>
 
-    <nav class="top-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="nav-brand">← Portfolio</a>
-            <div class="nav-links">
-                <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="OfirHalbershtatCV.pdf">Resume</a>
-            </div>
-        </div>
-    </nav>
 
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-eyebrow">Project 01 · Cloud Security</div>
-            <div class="hero-title">Wiz Multi-Cloud<br>Security Baseline</div>
-            <div class="hero-sub">OwnBackup · Product Security Team Leader · 2022</div>
-            <span class="metric-hero">70% ↓ high-risk misconfigs · 95% policy pass rate</span>
-        </div>
-    </section>
 
-    <hr class="divider">
 
-    <!-- Tools -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Stack</div>
-            <div class="section-line"></div>
-            <div>
-                <span class="tool-badge">Wiz CSPM/CWPP</span>
-                <span class="tool-badge">AWS Security Hub</span>
-                <span class="tool-badge">AWS GuardDuty</span>
-                <span class="tool-badge">Jira Cloud</span>
-                <span class="tool-badge">Slack Enterprise</span>
-            </div>
-        </div>
-    </div>
 
-    <hr class="divider">
-
-    <!-- Challenge -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Challenge</div>
-            <div class="section-line"></div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="dark-card">
-                        <p class="challenge-text">Inherited 20+ AWS and Azure accounts with fragmented security posture. No centralized visibility into cloud risks, manual remediation workflows.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Security Domains -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Security Domains &amp; Risk Coverage</div>
-            <div class="section-line"></div>
-            <div class="row g-3 mt-3" id="domains-cards">
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Cloud Misconfigurations</h6>
-                        <ul class="small mb-0">
-                            <li>Public storage buckets (S3, Azure Blob)</li>
-                            <li>Open ports & insecure network settings</li>
-                            <li>Missing encryption at-rest/in-transit</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Identity & Access</h6>
-                        <ul class="small mb-0">
-                            <li>Excessive IAM permissions & risky roles</li>
-                            <li>Unused permissions & privilege creep</li>
-                            <li>Cross-account access exposures</li>
-                            <li>Weak MFA enforcement</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Attack Surface</h6>
-                        <ul class="small mb-0">
-                            <li>Internet-exposed resources</li>
-                            <li>Shadow admins & forgotten access</li>
-                            <li>Unnecessary public endpoints</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Container Risk</h6>
-                        <ul class="small mb-0">
-                            <li>Vulnerable container images</li>
-                            <li>Misconfigurations in container runtime</li>
-                            <li>Exposed secrets in images/containers</li>
-                            <li>Over-privileged containers & service accounts</li>
-                            <li>Runtime threats/anomalous behavior</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Compliance & Data</h6>
-                        <ul class="small mb-0">
-                            <li>Sensitive data exposure (PII, secrets)</li>
-                            <li>CIS Benchmarks, PCI-DSS violations</li>
-                            <li>Vulnerability + misconfig correlations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Solution -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Implementation</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Deployment</h5>
-                        <ul>
-                            <li>Onboarded 20+ AWS/Azure accounts in 4 weeks</li>
-                            <li>Deployed <strong>100+ custom Wiz policies</strong> tailored to OwnBackup risk profile</li>
-                            <li>Established baseline scoring across all domains</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Automation & Workflow</h5>
-                        <ul>
-                            <li>Automated Jira ticketing for high/critical issues <em>(assigned to security engineers)</em></li>
-                            <li>Real-time Slack alerts routed to relevant cloud engineering teams</li>
-                            <li>Policy tuning reduced false positives by 40%</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Results -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Business Impact</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">70%</div><div class="stat-label">↓ High-risk misconfigurations</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Policy compliance rate</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">100+</div><div class="stat-label">Custom policies deployed</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">4w</div><div class="stat-label">Full deployment</div></div></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="btn-back">← Back to All Projects</a>
-            <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener" class="btn-linkedin">Contact on LinkedIn</a>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+<span class="tool-badge">Cloud Posture Management</span> <span class="tool-badge">Risk Policies</span> <span class="tool-badge">Security Automation</span> </div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- Challenge -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Challenge</div>
+<div class="section-line"></div>
+<div class="row">
+<div class="col-lg-8">
+<div class="dark-card">
+<p class="challenge-text">A large multi-cloud environment needed consistent risk visibility, policy governance, and a scalable remediation process.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- Security Domains -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Security Domains &amp; Risk Coverage</div>
+<div class="section-line"></div>
+<div class="row g-3 mt-3" id="domains-cards">
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Cloud Misconfigurations</h6>
+<ul class="small mb-0">
+<li>Public storage buckets (S3, Azure Blob)</li>
+<li>Open ports &amp; insecure network settings</li>
+<li>Missing encryption at-rest/in-transit</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Identity &amp; Access</h6>
+<ul class="small mb-0">
+<li>Excessive IAM permissions &amp; risky roles</li>
+<li>Unused permissions &amp; privilege creep</li>
+<li>Cross-account access exposures</li>
+<li>Weak MFA enforcement</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Attack Surface</h6>
+<ul class="small mb-0">
+<li>Internet-exposed resources</li>
+<li>Shadow admins &amp; forgotten access</li>
+<li>Unnecessary public endpoints</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Container Risk</h6>
+<ul class="small mb-0">
+<li>Vulnerable container images</li>
+<li>Misconfigurations in container runtime</li>
+<li>Exposed secrets in images/containers</li>
+<li>Over-privileged containers &amp; service accounts</li>
+<li>Runtime threats/anomalous behavior</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Compliance &amp; Data</h6>
+<ul class="small mb-0">
+<li>Sensitive data exposure (PII, secrets)</li>
+<li>CIS Benchmarks, PCI-DSS violations</li>
+<li>Vulnerability + misconfig correlations</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- Solution -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Implementation</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Deployment</h5>
+<ul>
+<li>Led a large-scale multi-cloud security posture deployment</li>
+<li>Customized risk policies for enterprise security requirements</li>
+<li>Established baseline scoring across security domains</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Automation &amp; Workflow</h5>
+<ul>
+<li>Automated risk-based remediation tracking</li>
+<li>Improved coordination between security and engineering</li>
+<li>Policy tuning reduced false positives by 40%</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- Results -->
+<div class="content-section">
+<div class="container">
+<div class="section-label">Business Impact</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">70%</div><div class="stat-label">↓ High-risk misconfigurations</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Policy compliance rate</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Enterprise</div><div class="stat-label">Risk policy scope</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">4w</div><div class="stat-label">Full deployment</div></div></div>
+</div>
+</div>
+</div>
+<div class="bottom-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="btn-back" href="index.html">← Back to All Projects</a>
+<a class="btn-linkedin" href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">Contact on LinkedIn</a>
+</div>
+</div>
+<script src="assets/bootstrap.bundle.min.js"></script>
+<script>
         function equalizeDomainCards() {
             const cards = document.querySelectorAll('#domains-cards .dark-card');
             cards.forEach(c => c.style.height = 'auto');

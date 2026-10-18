@@ -1,175 +1,164 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snyk + SonarQube DevSecOps | Ofir Halbershtat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="project.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevSecOps Pipeline with Software Supply Chain Controls | Ofir Halbershtat</title>
+<link href="assets/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="project.css" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="nav-brand">← Portfolio</a>
-            <div class="nav-links">
-                <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="OfirHalbershtatCV.pdf">Resume</a>
-            </div>
-        </div>
-    </nav>
+<nav class="top-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="nav-brand" href="index.html">← Portfolio</a>
+<div class="nav-links">
+<a href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">LinkedIn</a>
+<a href="OfirHalbershtatCV.pdf">Resume</a>
+</div>
+</div>
+</nav>
+<section class="hero">
+<div class="container hero-inner">
+<div class="hero-eyebrow">Project 03 · Secure Software Delivery Pipeline </div>
+<div class="hero-title">DevSecOps Pipeline with Software Supply Chain Controls</div>
+<div class="hero-sub">Product Security Team Leader</div>
+<span class="metric-hero">Zero critical vulns in prod · 40% faster releases</span>
+</div>
+</section>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Stack</div>
+<div class="section-line"></div>
+<div>
 
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-eyebrow">Project 03 · Secure Software Delivery Pipeline </div>
-            <div class="hero-title">DevSecOps Pipeline with Software Supply Chain Controls</div>
-            <div class="hero-sub">OwnBackup · Product Security Team Leader · 2021</div>
-            <span class="metric-hero">Zero critical vulns in prod · 40% faster releases</span>
-        </div>
-    </section>
 
-    <hr class="divider">
 
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Stack</div>
-            <div class="section-line"></div>
-            <div>
-                <span class="tool-badge">Sonatype Nexus Firewall</span>
-                <span class="tool-badge">Snyk SCA</span>
-                <span class="tool-badge">SonarQube SAST</span>
-                <span class="tool-badge">Container images scaning</span>                
-                <span class="tool-badge">Burp Suite DAST</span>
-                <span class="tool-badge">GitHub Actions</span>
-            </div>
-        </div>
-    </div>
 
-    <hr class="divider">
 
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Challenge</div>
-            <div class="section-line"></div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="dark-card">
-                        <p class="challenge-text">Engineers bypassed security by pulling packages directly from the internet and merging code without consistent AppSec gates. We needed a secure software factory that controlled the entire software supply chain—from package intake to production deployment—while maintaining developer velocity.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <hr class="divider">
-
+<span class="tool-badge">SAST / SCA</span> <span class="tool-badge">Container Security</span> <span class="tool-badge">DAST</span> <span class="tool-badge">CI/CD</span> </div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Challenge</div>
+<div class="section-line"></div>
+<div class="row">
+<div class="col-lg-8">
+<div class="dark-card">
+<p class="challenge-text">Engineering teams needed consistent application and software supply chain security throughout delivery while maintaining developer velocity.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
 <!-- Security Domains -->
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Security Domains &amp; Risk Coverage</div>
-            <div class="section-line"></div>
-            <div class="row g-3 mt-3" id="domains-cards">
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Software Supply Chain Security</h6>
-                        <ul class="small mb-0">
-                            <li>Protected Nexus repository as single source of truth for all OSS packages</li>
-                            <li>Pre-ingestion scanning to block malicious/vulnerable components</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Code & Dependency Security</h6>
-                        <ul class="small mb-0">
-                            <li>SonarQube SAST for code vulnerabilities & quality gates</li>
-                            <li>Snyk SCA for OSS dependencies, transitive vulns, license compliance</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Container Security</h6>
-                        <ul class="small mb-0">
-                            <li>Kubernetes image vulnerability scanning at merge time</li>
-                            <li>Runtime container misconfiguration detection</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Application & API Security</h6>
-                        <ul class="small mb-0">
-                            <li>Burp Suite DAST on candidate branches for web/API vulnerabilities</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card h-100">
-                        <h6 class="mb-3 fw-semibold">Risk Governance</h6>
-                        <ul class="small mb-0">
-                            <li>Automated severity-based Jira ticketing with SLAs</li>
-                            <li>Pragmatic merge policy (fail only criticals, track everything)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Implementation</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Pipeline 1 – Secure Package Factory (Nexus)</h5>
-                        <ul>
-                            <li>Enforced all OSS packages route through internal Nexus Repository Firewall</li>
-                            <li>Blocked direct npm/pypi/maven pulls from public registries</li>
-                            <li>Pre-scanned every package before allowing consumption in builds</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dark-card">
-                        <h5>Pipeline 2 – AppSec Merge Gates</h5>
-                        <ul>
-                            <li>Integrated SAST (SonarQube), SCA (Snyk), K8s image scanning at merge</li>
-                            <li>Auto-created Jira tickets for all new vulns with team assignment</li>
-                            <li>Hard fail policy: Critical only → High/Medium tracked via SLAs</li>
-                            <li>DAST layer: Burp Suite on candidate branches for API/web issues</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="content-section">
-        <div class="container">
-            <div class="section-label">Business Impact</div>
-            <div class="section-line"></div>
-            <div class="row g-4">
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Critical vulns in prod</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">Faster release cycles</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Code coverage</div></div></div>
-                <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">97%</div><div class="stat-label">PR security gating</div></div></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-nav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="btn-back">← Back to All Projects</a>
-            <a href="https://linkedin.com/in/ofirhalbershtat" target="_blank" rel="noopener" class="btn-linkedin">Contact on LinkedIn</a>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Security Domains &amp; Risk Coverage</div>
+<div class="section-line"></div>
+<div class="row g-3 mt-3" id="domains-cards">
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Software Supply Chain Security</h6>
+<ul class="small mb-0">
+<li>Governed open-source dependency intake</li>
+<li>Assessed component risk before use</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Code &amp; Dependency Security</h6>
+<ul class="small mb-0">
+<li>Static code analysis and quality gates</li>
+<li>Dependency vulnerability and license assessment</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Container Security</h6>
+<ul class="small mb-0">
+<li>Container image security assessment</li>
+<li>Container configuration risk assessment</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Application &amp; API Security</h6>
+<ul class="small mb-0">
+<li>Dynamic application and API security testing</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card h-100">
+<h6 class="mb-3 fw-semibold">Risk Governance</h6>
+<ul class="small mb-0">
+<li>Risk-based remediation tracking</li>
+<li>Documented security acceptance criteria</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Implementation</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Dependency Intake Governance</h5>
+<ul>
+<li>Established controlled dependency intake</li>
+<li>Applied software supply chain governance</li>
+<li>Integrated component risk checks into build processes</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="dark-card">
+<h5>Application Security Gates</h5>
+<ul>
+<li>Integrated application, dependency, and container security checks</li>
+<li>Automated remediation ownership and tracking</li>
+<li>Established risk-based release governance</li>
+<li>Integrated dynamic application security assessment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="content-section">
+<div class="container">
+<div class="section-label">Business Impact</div>
+<div class="section-line"></div>
+<div class="row g-4">
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">Zero</div><div class="stat-label">Critical vulns in prod</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">Faster release cycles</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Code coverage</div></div></div>
+<div class="col-6 col-md-3"><div class="stat-card"><div class="stat-number">97%</div><div class="stat-label">PR security gating</div></div></div>
+</div>
+</div>
+</div>
+<div class="bottom-nav">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="btn-back" href="index.html">← Back to All Projects</a>
+<a class="btn-linkedin" href="https://linkedin.com/in/ofir-halbershtat" rel="noopener" target="_blank">Contact on LinkedIn</a>
+</div>
+</div>
+<script src="assets/bootstrap.bundle.min.js"></script>
 </body>
 </html>
